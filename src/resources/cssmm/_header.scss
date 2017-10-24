@@ -1,0 +1,201 @@
+nav {
+    .nav {
+        background-color: $mainColor;
+        width: 100%;
+        li {
+            background: $mainColor;
+        }
+        .TopNav {
+            position: relative;
+        }
+    }
+
+
+    .navDark {
+        background: $mainColorDark;
+        float: right;
+        border: none;
+        a {
+            padding: 5px;
+            font-size: 40px;
+            color: $mainColor!important;
+        }
+        &:hover {
+            // background: $bg-color;
+        }
+        &:after {
+            display: none;
+        }
+    }
+    a {
+        color: $text-color!important;
+    }
+    li:last-child {}
+}
+.activeLinkColor{
+    background-color: $formButton;
+}
+.navbar-default .navbar-toggle {
+    border: none;
+    .icon-bar {
+        background-color: $mainColor;
+    }
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus{
+    background-color: $formButton;
+}
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus{
+    background-color: $formButton;
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus {
+    background-color: $formButton;
+    border-bottom: 1px solid $mainColorDark;
+}
+
+.navbar-default .navbar-nav>li>a:hover {
+    background-color: $formButton;
+}
+.navbar-default {
+    background: transparent;
+}
+.navBarStart {
+    padding-top: 27px;
+    p {
+        color: #fff;
+    }
+}
+.logoAndEmail{
+    padding-bottom: 15px;
+    padding-top: 20px;
+    .logo{
+        width: 250px;
+    }
+    .phoneNumbers{
+        border-right: thin solid;
+        // width: 195px;
+        text-align: center;
+    }
+    .email{
+        position: initial;
+    }
+    a{
+        color: $bodyTextColor;
+    }
+}
+.myNav{
+    z-index: 6;
+    position: sticky;
+    top: 0px;
+    background-color: $mainColor;
+    .container{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .dropdown-menu {
+        padding: 0px;
+    }
+    .socialMedia{
+        float: right;
+        display: -webkit-box;
+        display: box;
+        a{
+            padding: 15px 5px;
+                display: inline-block;
+        }
+    }
+}
+.navbar-default .navbar-nav>.open>a,
+.navbar-default .navbar-nav>.open>a:hover,
+.navbar-default .navbar-nav>.open>a:focus{
+    border: none;
+}
+.topMobileGreenBar{
+    background-color: $mainColor;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 5px 0px;
+}
+.mobilePhone{
+    text-align: center;
+    margin: 12px auto 15px;
+    a{
+        font-size: 20px;
+    }
+}
+@media (max-width: 992px) {
+    .nav>li>a {
+        padding: 15px 3px;
+    }
+    .breadcrumb-arrow li a,
+    .breadcrumb-arrow li:not(:first-child) span {       
+        padding: 0 4px 0 18px;       
+    }
+
+}
+@media (max-width: 768px) {
+    .logoAndEmail {
+        .pull-right{
+            float: left;
+            text-align: center;
+            .phoneNumbers{
+                width: 100%;
+                border: none;
+            }
+            .vCenter{
+                position: relative;
+                transform: translateY(0%);
+                -webkit-transform: translateY(0%);
+            }
+        }
+    }
+    .navbar-collapse {
+        margin-top: 65px;
+    }
+    .myNav{
+        position: absolute;
+        top: 0px;
+        right: 5px;
+        width: 100%;
+        background-color: transparent;
+        .socialMedia{
+            float: none;
+        }
+        .nav>li>a {
+            padding: 15px 30px;
+        }
+            .nav>.socialMedia>a {
+            padding: 15px 10px;            
+        }
+    }
+    .navbar-nav{
+        margin: 0px 0px;
+    }
+    .container>.navbar-header,
+    .container>.navbar-collapse,
+    .container-fluid>.navbar-header,
+    .container-fluid>.navbar-collapse{
+        margin-right: -5px;
+        margin-left: 0px;
+        
+    }
+    .navbar-nav .open .dropdown-menu{
+        margin-left: 15px;
+    }
+    .navbar-default .navbar-collapse,
+    .navbar-default .navbar-form{
+        margin-top: 75px;
+    }
+    .navbar-header{
+        float: right;
+        margin-top: 10px;
+    }
+    .logoDiv{
+        margin-left: -20px;
+    }
+}
+

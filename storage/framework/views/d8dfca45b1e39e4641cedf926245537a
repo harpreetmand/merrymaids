@@ -1,0 +1,233 @@
+
+<div class="col-md-3 col-sm-4 noPadding sidebar">
+    <div class="addressBox hidden-xs col-md-12 col-sm-12">
+        <p>
+           <a href="" ><span><?php echo e($data['allPages']->city); ?></span><br/> <?php echo $data['allPages']->address; ?></a>
+        </p>
+        <p>
+            <span>Call us at: </span><?php echo e($data['allPages']->phone); ?><br/> 
+            <?php if( $data['allPages']->secondPhoneNumber != '' ): ?>
+                <span><?php echo e($data['allPages']->secondPhoneLabel); ?> </span><?php echo e($data['allPages']->secondPhoneNumber); ?><br/> 
+            <?php endif; ?>
+        </p>
+        <p>
+            <a data-toggle="modal" data-target="#clickEmailModel"><?php echo e($data['allPages']->email); ?></a>
+        </p>
+    </div>
+    <div class="mobileAddressBox hidden-sm hidden-md hidden-lg">
+        <p>
+            <span><?php echo e($data['allPages']->city); ?></span>
+        </p>
+        <p>
+            <a class="btn btn-primary" href="tel:<?php echo e($data['allPages']->phone); ?>"><i class="fa fa-phone" aria-hidden="true"></i> <?php echo e($data['allPages']->phone); ?></a><br/> 
+        </p>
+            <br> 
+    </div>
+        <div class="joinTeam col-md-12 hidden-xs noPadding">      
+            <a href="<?php echo e(asset('contact/career-opportunities')); ?>"><img src="<?php echo e(asset('/img/merry-maids-jobs.png')); ?>" class="marginTopBottom img-responsive" alt="Work for Merry Maids"></a>
+        
+    </div>
+
+
+<div class="freeQuoteForm col-sm-12 noPadding">
+   
+    <h4 class="requestformtitle" onClick="changeMobileOnly()">Looking for a free quote?</h4>
+    <div class="tran changeMobile" id="changeMobile">
+  <div class="card card-block">
+
+
+    <?php echo Form::open(array('action' => 'FormController@getSidebarAndFeedback', 'class' => 'requestform')); ?>
+
+        <?php if(count($errors) > 0 && $errors[0]== 'Sidebar Form' ): ?>        
+            <ul class="errors">
+                <?php foreach($errors[1] as $error): ?>
+                    <li>- <?php echo e($error); ?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+    <div class="part-1">
+        <div class="form-group">
+            <div class="col-xs-5">
+                <?php echo Form::label('first_name', '*First Name'); ?>
+
+            </div>
+            <div class="col-xs-7">
+                <?php echo Form::text('first_name', Request::old('first_name'), array('required', 'class'=>'form-control')); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-5">
+                <?php echo Form::label('last_name', '*Last Name'); ?>
+
+            </div>
+            <div class="col-xs-7">
+                <?php echo Form::text('last_name', null, array('required', 'class'=>'form-control')); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-5">
+                <?php echo Form::label('phone', '*Phone'); ?>
+
+            </div>
+            <div class="col-xs-7">
+                <?php echo Form::text('phone', null, array('required', 'class'=>'form-control')); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-5">
+                <?php echo Form::label('email', '*Email'); ?>
+
+            </div>
+            <div class="col-xs-7">
+                <?php echo Form::text('email', null, array('required', 'class'=>'form-control')); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-5">
+                <?php echo Form::label('postal_code', '*Postal Code'); ?>
+
+            </div>
+            <div class="col-xs-7">
+                <?php echo Form::text('postal_code', null, array('required', 'class'=>'form-control')); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group right continue">
+            <span>*Required fields</span><br>
+            <div class="btn btn-primary" id="continue">
+                Continue
+            </div>
+        </div>
+    </div>
+    <div class="part-2">
+        <div class="form-group">
+            <div class="col-xs-5">
+                <?php echo Form::label('address'); ?>
+
+            </div>
+            <div class="col-xs-7">
+                <?php echo Form::text('address', null, array('class'=>'form-control')); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-5">
+                <?php echo Form::label('city'); ?>
+
+            </div>
+            <div class="col-xs-7">
+                <?php echo Form::text('city', null, array('class'=>'form-control')); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+                <div class="form-group hidden">
+            
+                <?php echo Form::label('require', '*Required'); ?>
+
+           
+                <?php echo Form::text('require', null, array( 'class'=>'form-control')); ?>
+
+            
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-5">
+                <?php echo Form::label('province'); ?>
+
+            </div>
+            <div class="col-xs-7">
+                <?php echo Form::select('province', array( 'Alberta' => 'Alberta', 'British Columbia' => 'British Columbia', 'Manitoba' => 'Manitoba',
+                'New Brunswick' => 'New Brunswick', 'Newfoundland' => 'Newfoundland', 'Nova Scotia' => 'Nova Scotia', 'Nunavut'
+                => 'Nunavut', 'Ontario' => 'Ontario', 'PEI' => 'PEI', 'Quebec' => 'Quebec' ));; ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12">
+                <?php echo Form::label('sources', 'Where did you hear about us?'); ?>
+
+            </div>
+            <div class="col-xs-12">
+                <?php echo Form::select('sources', array( 'Google' => 'Google', 'Word of Mouth' => 'Word of Mouth', 'Social Media' => 'Social Media',
+                'E-Blast' => 'E-Blast', 'Advertisement' => 'Advertisement', 'Car Decals' => 'Car Decals', 'Newspaper' =>
+                'Newspaper' ));; ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            <div class="col-xs-12">
+                <?php echo Form::label('message','Additional notes about the home:'); ?>
+
+            </div>
+            <div class="col-xs-12">
+                <?php echo Form::textarea('message', null, array('class'=>'form-control')); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+                <div class="form-group hidden">
+            
+                <?php echo Form::label('typeOfForm', '*Postal Code'); ?>
+
+           
+                <?php echo Form::text('typeOfForm', 'Sidebar Form', array('required', 'class'=>'form-control', 'readonly' => 'true')); ?>
+
+            
+            <div class="clear"></div>
+        </div>
+
+
+        <div class="form-group">
+            <div class="col-xs-1">
+                <?php echo Form::checkbox('anti_spam', 'yes'); ?>
+
+            </div>
+            <div class="col-xs-11 anti-spam">
+                <?php echo Form::label('anti_spam','Canada’s new anti-spam legislation requires us to have your consent to send you emails. Please
+                check this box to confirm your consent to receive electronic messages from Merry Maids.'); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group right">
+            <span>*Required fields</span><br> <?php echo Form::submit('Submit', array('class'=>'btn btn-primary')); ?>
+
+        </div>
+    </div>
+
+
+
+    <?php echo Form::close(); ?>
+
+  </div>
+</div>
+</div>
+<div class="clear visible-sm visibile-xs">
+</div>
+
+    
+
+<!--Display google maps
+    put long and lat in the follwing hidden input fields
+    Javascript on app page will getElementById
+-->
+<input id="smallLng" class="hidden" value="<?php echo e($data['allPages']->lng); ?>" readonly>
+<input id="smallLat" class="hidden" value="<?php echo e($data['allPages']->lat); ?>" readonly>
+    <!--<div id="googleMap"></div>-->
+    <div class="col-md-12 hidden-xs noPadding">
+       <a href="<?php echo e(url('/promotions/gift-cards')); ?>"> <img src="<?php echo e(asset('/img/cleaning-discounts.png')); ?>" alt="merry maids gift cards" class="marginTopBottom img-responsive"></a>
+    </div>
+</div>

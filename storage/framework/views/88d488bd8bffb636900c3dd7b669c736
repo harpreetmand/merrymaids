@@ -1,0 +1,108 @@
+<?php if(count($errors) > 0): ?>
+  <?php if($errors[0] != "Email Form"): ?>
+    <div class="top-errors">
+      <ul class="errors">
+          <span>Please review the following errors:</span>
+          <?php foreach($errors[1] as $error): ?>
+              <li>- <?php echo e($error); ?></li>
+          <?php endforeach; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
+<?php endif; ?>
+
+<div class="container logoAndEmail">
+    <div class="col-md-3 col-sm-3 col-xm-3 logoDiv">
+      <a href="<?php echo e(url('')); ?>"><img class="logo" src="<?php echo e(asset('/imgs/merry-maids-logo.jpg')); ?>" alt="Merry Maids logo"></a>
+    </div>
+    <div class="col-lg-5 col-md-6 col-sm-7 col-xs-12 pull-right hidden-xs topInfo">
+
+
+      <div class="phoneNumbers col-sm-6">
+          <?php if($data['allPages']->firstPhone): ?><a target="_blank" href="tel:<?php echo e($data['allPages']->firstPhone); ?>" onclick="trackPhone('Phone', '<?php echo e(Session::get('analyticsPhone')); ?>', '<?php echo e($data['allPages']->firstPhoneLabel); ?>')" > <?php echo e($data['allPages']->firstPhoneLabel); ?> <span class="text-nowrap"><?php echo e($data['allPages']->firstPhone); ?></span><br/> </a><?php endif; ?>
+          <?php if($data['allPages']->secondPhone): ?><a target="_blank" href="tel:<?php echo e($data['allPages']->secondPhone); ?>" onclick="trackPhone('Phone', '<?php echo e(Session::get('analyticsPhone')); ?>', '<?php echo e($data['allPages']->secondPhoneLabel); ?>')" > <?php echo e($data['allPages']->secondPhoneLabel); ?> <span class="text-nowrap"><?php echo e($data['allPages']->secondPhone); ?></span><br/> </a><?php endif; ?>
+          <?php if($data['allPages']->thirdPhone): ?><a target="_blank" href="tel:<?php echo e($data['allPages']->thirdPhone); ?>" onclick="trackPhone('Phone', '<?php echo e(Session::get('analyticsPhone')); ?>', '<?php echo e($data['allPages']->thirdPhoneLabel); ?>')"> <?php echo e($data['allPages']->thirdPhoneLabel); ?> <span class="text-nowrap"><?php echo e($data['allPages']->thirdPhone); ?></span><br/> </a><?php endif; ?>
+      </div>
+
+      <div class="col-sm-6 email">
+        <div class="vCenter">
+          <a data-toggle="modal" data-target="#clickEmailModel"><?php echo e($data['allPages']->email); ?></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="myNav" id="myNav">
+  <div class="container">
+      <nav class="navbar-default">
+        <div class="container-fluid noPadding">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse noPadding" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <?php foreach($data['nav'] as $mainNav): ?>
+                <?php if($mainNav->parent == 0): ?>
+                  <?php if($mainNav->dropdown == 1): ?>
+                    <li role="presentation" class="dropdown TopNav tran">
+                      <a class="dropdown-toggle mainNav-<?php echo e($mainNav->slug); ?>" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        <?php echo e($mainNav->name); ?>  <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu tran">
+                        <?php foreach($data['nav'] as $subNav): ?>
+                          <?php if($subNav->parent == $mainNav->id): ?>
+                        <li class=""><a href="<?php echo e(asset($mainNav->slug)); ?>/<?php echo e($subNav->slug); ?>"><?php echo e($subNav->name); ?></a></li>
+                    <?php endif; ?>
+                    <?php endforeach; ?>
+                    </ul>
+                  </li>
+                <?php else: ?>
+                  <li class="TopNav"><a href="<?php echo e(asset($mainNav->slug)); ?>"><?php echo e($mainNav->name); ?> </a></li>
+                <?php endif; ?>
+                <?php endif; ?>
+              <?php endforeach; ?>
+          
+                <li class="TopNav socialMedia">
+                
+                  <?php if($data['allPages']->homestars): ?><a target="_blank" href="<?php echo e($data['allPages']->homestars); ?>"> <img src="<?php echo e(asset('/imgs/homestars.png')); ?>" alt="Homestars"></a><?php endif; ?>                
+                  <?php if($data['allPages']->facebook): ?><a target="_blank" href="<?php echo e($data['allPages']->facebook); ?>"><em class="fa fa-facebook"></em></a><?php endif; ?>
+                  <?php if($data['allPages']->twitter): ?><a target="_blank" href="<?php echo e($data['allPages']->twitter); ?>"><em class="fa fa-twitter"></em></a><?php endif; ?>
+                  <?php if($data['allPages']->linkedin): ?><a target="_blank" href="<?php echo e($data['allPages']->linkedin); ?>"><em class="fa fa-linkedin"></em></a><?php endif; ?>
+                  <?php if($data['allPages']->googlePlus): ?><a target="_blank" href="<?php echo e($data['allPages']->googlePlus); ?>"><em class="fa fa-google-plus"></em></a><?php endif; ?>
+                  <?php if($data['allPages']->youtube): ?><a target="_blank" href="<?php echo e($data['allPages']->youtube); ?>"><em class="fa fa-youtube"></em></a><?php endif; ?>
+                  <?php if($data['allPages']->yelp): ?><a target="_blank" href="<?php echo e($data['allPages']->yelp); ?>"><em class="fa fa-yelp"></em></a><?php endif; ?>
+                  
+                </li>
+    
+            </ul>
+            
+          </div><!-- /.navbar-collapse -->
+          
+        </div><!-- /.container-fluid -->
+        
+      </nav>
+      
+    </div>
+</div>
+<div class="cf"></div>
+  <div class="visible-xs-block">
+  <div class="topMobileGreenBar">
+    <div class="container">
+      <?php echo e($data['allPages']->city); ?>
+
+    </div>
+  </div>
+    <div class="mobilePhone">
+           <?php if($data['allPages']->firstPhone): ?><a target="_blank" class="btn btn-info" href="tel:<?php echo e($data['allPages']->firstPhone); ?>" onclick="trackPhone('Phone', '<?php echo e(Session::get('analyticsPhone')); ?>', 'Mobile site')"> <?php echo e($data['allPages']->firstPhone); ?><br/> </a><?php endif; ?>
+    </div>
+</div>
+
+
+

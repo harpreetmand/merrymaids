@@ -1,0 +1,75 @@
+<?php if(count($errors) > 0): ?>
+  <?php if($errors[0] != "Email Form"): ?>
+    <div class="top-errors">
+      <ul class="errors">
+          <span>Please review the following errors:</span>
+          <?php foreach($errors[1] as $error): ?>
+              <li>- <?php echo e($error); ?></li>
+          <?php endforeach; ?>
+      </ul>
+    </div>
+  <?php endif; ?>
+<?php endif; ?>
+<div class="container transparent">
+  <div class="col-md-9 col-sm-12 noPadding navBarStart">
+    <div class="col-sm-6 noPadding hidden-sm hidden-xs">
+    <?php if(Route::current()->getName()=='home'): ?>
+      <h1 class="topText"><?php echo e($data['allPages']->h1); ?></h1>
+    <?php else: ?>
+      <span class="topText"><?php echo e($data['allPages']->h1); ?></span>
+    <?php endif; ?>
+    </div>
+    <div class="col-sm-6 noPadding hidden-sm hidden-xs">
+      <div class="socialButtons">
+        <?php if($data['allPages']->facebook): ?><a target="_blank" href="<?php echo e($data['allPages']->facebook); ?>"><em class="fa fa-facebook"></em></a><?php endif; ?>
+        <?php if($data['allPages']->twitter): ?><a target="_blank" href="<?php echo e($data['allPages']->twitter); ?>"><em class="fa fa-twitter"></em></a><?php endif; ?>
+        <?php if($data['allPages']->linkedin): ?><a target="_blank" href="<?php echo e($data['allPages']->linkedin); ?>"><em class="fa fa-linkedin"></em></a><?php endif; ?>
+        <?php if($data['allPages']->googlePlus): ?><a target="_blank" href="<?php echo e($data['allPages']->googlePlus); ?>"><em class="fa fa-google-plus"></em></a><?php endif; ?>
+        <?php if($data['allPages']->youtube): ?><a target="_blank" href="<?php echo e($data['allPages']->youtube); ?>"><em class="fa fa-youtube"></em></a><?php endif; ?>
+        <?php if($data['allPages']->yelp): ?><a target="_blank" href="<?php echo e($data['allPages']->yelp); ?>"><em class="fa fa-yelp"></em></a><?php endif; ?>
+      </div>
+    </div>
+    <nav class="navbar-default">
+      <div class="container-fluid noPadding">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse noPadding" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <?php foreach($data['nav'] as $mainNav): ?>
+              <?php if($mainNav->parent == 0): ?>
+                <?php if($mainNav->dropdown == 1): ?>
+                  <li role="presentation" class="dropdown TopNav tran">
+                    <a class="dropdown-toggle mainNav-<?php echo e($mainNav->slug); ?>" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                      <?php echo e($mainNav->name); ?>  <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu tran">
+                      <li class=""><a href="<?php echo e(asset($mainNav->slug)); ?>"><?php echo e($mainNav->name); ?></a></li>
+                      <?php foreach($data['nav'] as $subNav): ?>
+                        <?php if($subNav->parent == $mainNav->id): ?>
+                      <li class=""><a href="<?php echo e(asset($mainNav->slug)); ?>/<?php echo e($subNav->slug); ?>"><?php echo e($subNav->name); ?></a></li>
+                  <?php endif; ?>
+                  <?php endforeach; ?>
+                  </ul>
+                </li>
+              <?php else: ?>
+                <li class="TopNav"><a href="<?php echo e(asset($mainNav->slug)); ?>"><?php echo e($mainNav->name); ?> </a></li>
+              <?php endif; ?>
+              <?php endif; ?>
+            <?php endforeach; ?>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+  </div>
+  <div class="col-md-3 col-xm-3 logoDiv">
+    <a href="<?php echo e(url('')); ?>"><img class="animation animated bounceIn infinity logo" src="<?php echo e(asset('/img/merry-maids-logo.png')); ?>" alt="logo"></a>
+  </div>
+</div>

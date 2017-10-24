@@ -1,0 +1,242 @@
+// /***********************************
+// Global
+// ***********************************/
+// .blue-text{
+// 	color:#45ABD4;
+// }
+// .blue-text-big{
+// 	font-size: 18px;
+// 	font-weight: bold;
+// 	color:#45ABD4;
+// 	margin:10px 0px;
+// }
+// /***********************************
+// Partner Page
+// ***********************************/
+// .clear{
+// 	clear:both;
+// }
+// .partner-sections{
+// 	margin-bottom: 40px;
+// }
+// .partner-image{
+// 	float:left;
+// 	width: 25%;
+// 	margin-top: 10px;
+// }
+// .partner-image img{
+//  max-width: 128px;
+//  width:auto;
+//  height:auto;
+//  max-height: 94px;
+// }
+// .partner-text{
+// 	float:left; width:70%; padding-left: 25px;
+// }
+// .partner-text h2{
+// 	color:#45ABD4;
+// 	margin: 0px;
+// 	font-size: 20px;
+// 	font-weight: bold;
+// }
+// .partner-button{
+// 	color: #fff;
+//     background:#45ABD4;
+//     padding: 10px 30px 10px 10px;
+//     display: inline-block;
+//     margin-top: 10px;
+//     font-size: 18px;
+//     font-weight: normal;
+//     display:none;
+// }
+// .partner-button:hover{
+// 	text-decoration: none;
+// 	background:#70BC48;
+// 	color:#ffffff;
+// }
+
+// /*************************************
+// Career Modal
+// ************************************/
+// .modalDialog .modal-container.career-form-container{max-width: 500px;}
+
+// /*************************************
+// Career Form
+// ************************************/
+// .apply-button {
+//     color: #fff;
+//     background: #45ABD4;
+//     padding: 10px 30px 10px 30px;
+//     display: inline-block;
+//     margin-top: 10px;
+//     font-size: 18px;
+//     font-weight: normal;
+// }
+// .apply-button:hover{
+// 	text-decoration: none;
+// 	background: #70BC48;
+// 	color:#ffffff;
+// }
+// #career-form .cognito .c-field{
+// 	padding: 0px
+// }
+// #career-form p{
+// 	color:#000;
+// }
+// #career-form .cognito .c-editor .c-choice-option span, #career-form .cognito .c-editor .c-yesno-radio span, #career-form .cognito .c-editor.c-yesno-checkbox .c-label{
+//   padding-left: 30px;
+// }
+// #career-form .c-forms-heading, #career-form label, #career-form  .c-fileupload-dropzone-message {
+// 	display:none;
+// }
+// #career-form .c-choice-option label{
+//   display: block
+// }
+// #career-form .logo-image{
+// margin-bottom:10px;
+// }
+// #career-form legend{
+// 	margin-bottom: 10px;
+// }
+// #career-form .cognito.c-sml .c-field, .cognito.c-sml .c-action{
+// 	float: left !important;
+// 	  width: 50% !important;
+// }
+// #career-form .cognito.c-sml .c-field.c-span-2{
+// 	  width: 100% !important;
+// }
+// #career-form .c-section.c-col-1.c-span-2 .c-span-1:nth-child(2){
+//     width: 20% !important;
+// }
+// #career-form .c-section.c-col-1.c-span-2 .c-span-1:nth-child(3){
+//     width: 30% !important;
+//     clear:none !important;
+// }
+// #career-form .cognito form .c-upload-button input {
+//     background: none;
+//     border: none;
+//     color: transparent;
+//     padding: 1px 0px;
+//     position: relative;
+//     opacity: 0;
+//     margin-top: -10px;;
+//     margin-left: -45px;
+// }
+// #career-form .c-field.c-col-1.c-span-1 .c-upload-button::before{
+// 	content: 'Upload Resume';
+// }
+// #career-form .c-field.c-col-2.c-span-1 .c-upload-button::before{
+// 	content: 'Upload References';
+// }
+// #career-form .c-upload-button::before{
+// 	display: inline-block;
+// 	white-space: nowrap;
+// 	-webkit-user-select: none;
+// 	cursor: pointer;
+// 	font-weight: 700;
+// 	font-size: 15px;
+// 	background: #45ABD4;
+// 	padding: 10px 25px;
+// 	color:#fff;
+// 	margin-top: 5px;
+// 	position: absolute;
+// }
+// #career-form .cognito .c-forms-form .c-fileupload-dropzone .c-upload-button {
+//     background-color: transparent;
+//     border-color: transparent;
+//     color: transparent;
+//     height: 40px;
+// }
+// #career-form .cognito .c-forms-form .c-background-highlight{
+// background: transparent;
+// }
+// #career-form .cognito form .c-fileupload .c-upload-button {
+//     position: relative;
+//     overflow: hidden;
+//     cursor: pointer;
+//     margin: 0px;
+//     vertical-align: middle;
+//     display: inline-block;
+//     padding: 0em;
+//     margin: 0;
+//     border-width: 0px;
+//     line-height: 100%;
+// }
+// #career-form .cognito form .c-fileupload .c-upload-button::-webkit-file-upload-button {
+//   visibility: hidden;
+// }
+// #career-form button{
+// 	width: 160px;
+// 	background-color: #70BC48 !important;
+// 	border: 0px;
+// 	font-weight: 700;
+//     font-size: 15px;
+//     border-radius:0px;
+//     padding: 10px 0px;
+// }
+
+// #career-form .cognito .c-button-section{
+// 	padding-bottom: 0px;
+// 	margin-top: 0px;
+// }
+// /*************************************************
+// Global Modal
+// *************************************************/
+
+// .modalDialog {
+// 	position: fixed;
+// 	font-family: Arial, Helvetica, sans-serif;
+// 	top: 0;
+// 	right: 0;
+// 	bottom: 0;
+// 	left: 0;
+// 	background: rgba(0,0,0,0.8);
+// 	z-index: 99999999;
+// 	display:none;
+
+// }
+// .modalDialog .modal-container{
+// 	min-width:240px;
+// 	max-width: 800px;
+// 	position: relative;
+// 	min-height: 0px;
+// 	margin-left: auto;
+// 	margin-right: auto;
+// 	padding: 25px;
+// 	background: #fff;
+// 	top:-1000px;
+// 	-webkit-transition: all 100ms ease-in;
+// 	-moz-transition: all 100ms ease-in;
+// 	transition: all 100ms ease-in;
+// }
+// .modalDialog .inner-model{
+// 	min-width:240px;
+// 	max-width: 800px;
+// 	height:100%;
+// 	overflow-y: auto;
+// 	overflow-x:hidden;
+// 	position: relative;
+// }
+// .modal-close {
+// 	background: #45ABD4;
+// 	color: #FFFFFF !important;
+// 	line-height: 25px;
+// 	position: absolute;
+// 	right: -12px;
+// 	text-align: center;
+// 	top: -10px;
+// 	width: 24px;
+// 	text-decoration: none !important;
+// 	font-weight: bold;
+// 	-webkit-border-radius: 12px;
+// 	-moz-border-radius: 12px;
+// 	border-radius: 12px;
+// 	cursor:pointer;
+// }
+
+// .modal-close:hover { text-decoration: none; color: #FFFFFF !important; background: #80ba1d; }
+
+// .modal-open{cursor:pointer;}
+// #career-video .modal-container{
+// 	text-align: center;
+// }

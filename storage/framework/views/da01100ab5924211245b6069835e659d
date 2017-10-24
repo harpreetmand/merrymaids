@@ -1,0 +1,123 @@
+<?php $__env->startSection('title'); ?>Contact Us | <?php $__env->stopSection(); ?>
+<?php $__env->startSection('description'); ?><?php echo e($body->metaDesc); ?><?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+
+
+
+
+
+
+<div class="container">
+    <div class="pagesTopImage">
+      <div class="imgBackground">
+        <img src="<?php echo e(asset('/imgs/'.$body->image)); ?>" alt="<?php echo e($body->title); ?>" class="t"/>
+        <div class="textSkew <?php echo e($body->colorClass); ?>">
+          <div class="text">
+            <?php echo e($body->textOnImage); ?>
+
+          </div>
+        </div>
+      </div>
+    </div>
+ <?php echo $__env->make('layout.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <div class="clear visible-sm visibile-xs">
+  </div>
+  <div class="col-md-9 col-sm-8 col-xs-12 mainContent">
+ <?php echo $__env->make('layout.breadcrumbs', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <h2><?php echo e($body->title); ?></h2>
+    
+    <h4>
+        <?php if($data['allPages']->address): ?><a target="_blank" href="tel:<?php echo e($data['allPages']->firstPhone); ?>">
+            <a target="_blank" href="http://maps.google.com/?q=<?php echo e($data['allPages']->address); ?>"><?php echo $data['allPages']->address; ?></a><br/><br/>
+        <?php endif; ?>
+        <?php if($data['allPages']->firstPhone): ?> <?php echo e($data['allPages']->firstPhoneLabel); ?> <?php echo e($data['allPages']->firstPhone); ?><br/><?php endif; ?>
+        <?php if($data['allPages']->secondPhone): ?> <?php echo e($data['allPages']->secondPhoneLabel); ?> <?php echo e($data['allPages']->secondPhone); ?><br/><?php endif; ?>
+        <?php if($data['allPages']->thirdPhone): ?> <?php echo e($data['allPages']->thirdPhoneLabel); ?> <?php echo e($data['allPages']->thirdPhone); ?><br/> <?php endif; ?>    
+
+        <br/><?php if($data['allPages']->email): ?> <?php echo e($data['allPages']->email); ?> <br/> <?php endif; ?>    
+        
+    </h4>
+
+  <?php echo $body->body; ?>
+
+
+
+
+  <?php echo Form::open(array('action' => 'FormController@getSidebarAndFeedback', 'class' => 'form row')); ?>
+
+
+        <?php if(count($errors) > 0 && $errors[0]== 'Feedback Form' ): ?>        
+            <ul class="errors">
+                <?php foreach($errors[1] as $error): ?>
+                    <li>- <?php echo e($error); ?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+        <div class="form-group">
+          
+          <div class="col-sm-6">
+                <?php echo Form::text('first_name', Request::old('first_name'), array('required', 'class'=>'form-control col-sm-6','placeholder'=>'First Name*')); ?>
+
+        </div>
+          <div class="col-sm-6">
+                
+                <?php echo Form::text('last_name', null, array('required', 'class'=>'form-control col-sm-6','placeholder'=>'Last Name*')); ?>
+
+          </div>
+            <div class="clear"></div>
+            <div class="col-sm-3">
+                <?php echo Form::text('phone', null, array('required', 'class'=>'form-control','placeholder'=>'Phone Number*')); ?>
+
+                </div>
+            <div class="col-sm-6">
+                <?php echo Form::text('email', null, array('required', 'class'=>'form-control','placeholder'=>'Email*')); ?>
+
+                
+            </div>
+            <div class="col-sm-3">
+                <?php echo Form::text('postal_code', null, array('required', 'class'=>'form-control','placeholder'=>'Postal Code*')); ?>
+
+                
+            </div>
+            <div class="col-sm-12">
+             <?php echo Form::textarea('message', null, array('class'=>'form-control','placeholder'=>'Message*')); ?>
+
+             </div>
+            <div class="clear"></div>
+        </div>
+
+
+        <div class="form-group hidden">
+            
+                <?php echo Form::label('typeOfForm', '*Postal Code'); ?>
+
+           
+                <?php echo Form::text('typeOfForm', 'Feedback Form', array('required', 'class'=>'form-control', 'readonly' => 'true')); ?>
+
+            
+            <div class="clear"></div>
+        </div>
+
+
+
+<div class="form-group">
+<div class="col-sm-12">
+    <?php echo Form::submit('Contact Us!', 
+      array('class'=>'btn btn-primary')); ?>
+
+      </div>
+</div>
+<br/>
+<br/>
+
+
+
+<?php echo Form::close(); ?>
+
+</div>
+
+</div>
+<?php echo $__env->make('layout.testimonials', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>;
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

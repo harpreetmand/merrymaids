@@ -1,0 +1,90 @@
+.sticky{
+    position: sticky;
+    top: 20px;
+}
+.sidebar{
+    float: right;
+    
+    z-index: 4;
+    margin-top: -30px;
+    text-align: center;
+    .freeQuoteForm{
+        box-shadow: 0px 2px 5px 1px;
+        position: absolute;
+        top: -4px;
+        right: 0px;
+        z-index: 4;
+        background-color: #fff;
+        padding: 25px 15px;
+    }
+    h4{
+        font-family: 'Dancing Script', cursive;
+        color: $formButton;
+        font-size: 30px;
+    }
+    h5{
+        color: $mainColor;
+        font-size: 24px;
+    }
+    .card{
+        margin-top: 20px;
+    }
+    .form-control, textarea, select {
+        border-radius: 0px;
+        margin: 10px 0px;
+        height: 28px;
+        border: 1px solid $bodyTextColor;
+    }
+    textarea{
+        height: 100px !important;
+    }
+    select{
+        width: 100%;
+        margin: 0px;
+    }
+    #continue{
+        margin-top: 10px;
+        height: 28px;
+        margin-left: 10px;
+        padding: 4px 12px;
+    }
+    .postalCode{
+        margin-top: -10px;
+    }
+    .part-2 {
+        display: none;
+    }
+    .checkboxAndAntiSpam{
+        margin-top: 5px;
+    }
+    .anti-spam{
+        text-align: left;
+        margin-top: 2px;
+    }
+}
+.homePage {
+    .sidebar {
+        margin-top: -4px;
+    }
+}
+.promotionsbig{
+    font-size: 30px;
+    color: $mainColor;
+}
+.promotionsbigPrice{
+    color: $linkColor;
+    font-size: 40px;
+}
+@media(max-width: 768px) {
+    .sidebar {
+        max-width: 350px;
+        margin: 0 auto;
+        float: none;
+        height: 400px;
+        position: relative;
+        top: 0px;
+    }
+}
+.noSticky{
+    top: 0px;
+}

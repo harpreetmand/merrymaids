@@ -1,0 +1,356 @@
+@import 'include/reset';
+@import 'include/animate';
+@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+// @import 'include/neat-orange';
+@import 'include/responsive-slider';
+@import 'include/font-awesome.min';
+@import 'include/settings';
+// @import 'include/style';
+// @import 'include/layers';
+// @import 'include/navigation';
+$mainColor: #7AC142;
+$mainColorDark: #006738;
+$mainColorLight: #DCECCC;
+$bg-color: #fff;
+$navBG: #49acd2;
+$hover-color-dark: #2CABD3;
+$hover-color: #16a085;
+$text-color: #fff;
+$linkColor: #42ACCF;
+$formBg: #a0daec;
+$formButton: #f6905d;
+$bodyTextColor: #808284;
+
+@font-face {
+    font-family: 'frutiger_lt_std45_light';
+    src: url('../fonts/frutigerltstd-light-webfont.eot');
+    src: url('../fonts/frutigerltstd-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/frutigerltstd-light-webfont.woff') format('woff'),
+         url('../fonts/frutigerltstd-light-webfont.ttf') format('truetype'),
+         url('../fonts/frutigerltstd-light-webfont.svg#frutiger_lt_std45_light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'frutiger_lt_std65_bold';
+    src: url('../fonts/frutigerltstd-bold-webfont.eot');
+    src: url('../fonts/frutigerltstd-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/frutigerltstd-bold-webfont.woff') format('woff'),
+         url('../fonts/frutigerltstd-bold-webfont.ttf') format('truetype'),
+         url('../fonts/frutigerltstd-bold-webfont.svg#frutiger_lt_std65_bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'frutiger_lt_std55_roman';
+    src: url('../fonts/frutigerltstd-roman-webfont.eot');
+    src: url('../fonts/frutigerltstd-roman-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/frutigerltstd-roman-webfont.woff') format('woff'),
+         url('../fonts/frutigerltstd-roman-webfont.ttf') format('truetype'),
+         url('../fonts/frutigerltstd-roman-webfont.svg#frutiger_lt_std55_roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+$primaryFont: 'frutiger_lt_std45_light';
+$boldFont: 'frutiger_lt_std65_bold';
+body {
+  font-family: $primaryFont;
+  background-color: #fff;
+  color: $bodyTextColor;
+  font-size: 15px;
+  min-width: 320px;
+}
+::-webkit-input-placeholder {
+  font-style: italic;
+}
+
+:-moz-placeholder {
+  font-style: italic;
+}
+
+::-moz-placeholder {
+  font-style: italic;
+}
+
+:-ms-input-placeholder {
+  font-style: italic;
+}
+a{
+  color: $linkColor;
+  text-decoration: none;
+&:hover{
+  text-decoration: none;
+}
+}
+.vCenter{
+  top: 50%;
+  position: absolute;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+.green{
+  color: $mainColor;
+  font-weight: 600;
+}
+.box {
+  border: thin solid red;
+}
+.noPadding {
+  padding: 0;
+}
+.btn-primary{
+  color: #fff;
+  background-color: $mainColor;
+  border-color: $mainColor;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: $mainColorDark;
+  border-color: $mainColorDark;
+}
+.btn{
+  border-radius: 0px;
+}
+.btn-info{
+    background-color: $formButton;
+    border-color: $formButton;
+}
+.italic{
+  font-style: italic;
+}
+hr{
+  border-top: 1px solid $bodyTextColor;
+}
+.form-control,
+textarea,
+select {
+  border-radius: 0px;
+  margin: 10px 0px;
+  height: 28px;
+  border: 1px solid $bodyTextColor;
+}
+
+textarea {
+  height: 100px !important;
+}
+
+select {
+  width: 100%;
+  margin: 0px;
+}
+.biggerFont{
+  font-size: 18px;
+}
+.marRight10{
+  margin-right: 10px;
+}
+.center{
+  margin: 0 auto;
+  float: none;
+  text-align: center;
+}
+
+.clear {
+  clear: both;
+}
+  .notFoundCenter {
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   position: absolute;
+    text-align: center;
+}
+
+
+// .addressBox{
+//   border: 1px solid $bodyTextColor;
+//   padding: 15px 15px 5px 15px;
+//   span{
+//     color: $mainColor;
+//   }
+// }
+// .requestformtitle {
+//   padding: 10px;
+//   background: $mainColor;
+//   color: $bg-color;
+//   font-family: $primaryFont;
+//   font-size: 19px;
+//   margin: 0;
+//   text-align: center;
+// }
+// .requestform {
+//   font-family: $primaryFont;
+//   background-color: $formBg;
+//   padding: 25px 12px;
+//   .form-group {
+//     margin-bottom: 10px;
+//     span {
+//       font-size: 12px;
+//     }
+//     &.right {
+//       text-align: right;
+//     }
+//     .col-xs-5, .col-xs-7, .col-xs-12, .col-xs-1, .col-xs-11 {
+//       padding: 0px;
+//     }
+//     .col-xs-11 {
+//       label {
+//         padding-right: 0px;
+//         font-size: 11px;
+//         line-height: 15px;
+//         text-align: left;
+//       }
+//     }
+//     .col-xs-12 {
+//       label {
+//         text-align: left;
+//       }
+//     }
+//     label {
+//       float: left;
+//       font-size: 14px;
+//       line-height: 24px;
+//       margin-bottom: 0px;
+//       color: darken(#808284,20);
+//       width: 100%;
+//       text-align: right;
+//       padding-right: 12px;
+//     }
+//     input {
+//       border: none;
+//       border-radius: 0px;
+//       line-height: 24px;
+//       height: 24px;
+//       padding: 6px 5px;
+//     }
+//     select {
+//       border: 1px solid #111;
+//       background: transparent;
+//       width: 100%;
+//       padding: 0px 5px;
+//       font-size: 14px;
+//       border: none;
+//       height: 24px;
+//       -webkit-appearance: none;
+//       -moz-appearance: none;
+//       appearance: none;
+//       border-radius: 0px;
+//       background: url(http://www.merrymaids.ca/img/down-arrow.png) 99% / 24px no-repeat #FFF;
+//     }
+//     textarea {
+//       height: 120px !important;
+//       max-width: 100%;
+//       max-height: 160px;
+//       border-radius: 0px;
+//       border: none;
+//     }
+
+//     /*target Internet Explorer 9 and Internet Explorer 10:*/
+//     @media screen and (min-width:0\0) {
+//         select {
+//             background:none;
+//             padding: 5px;
+//         }
+//     }
+//   }
+
+//   .part-2 {
+//     display: none;
+//   }
+// }
+// .errors {
+//   li {
+//     background-color: #f65d77;
+//     padding: 3px 5px;
+//     color: #FFF;
+//     font-size: 13px;
+//   }
+// }
+// .top-errors {
+//   text-align: center;
+//   .errors {
+//     background-color: #f65d77;
+//     color: #FFF;
+//     span {
+//       padding: 13px 5px;
+//       margin-bottom: -4px;
+//       font-size: 20px;
+//       display: block;
+//     }
+//     li {
+//       padding: 3px 5px;
+//       font-size: 15px;
+//     }
+//   }
+// }
+// .widthFull{
+//   width: 100%;
+// }
+// .marginTopBottom{
+//   margin-bottom: 10px;
+//   margin-top: 10px;
+// }
+// h1{
+//   color: $mainColor;
+//   font-size: 22px;
+// }
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+  position: relative;
+  min-height: 1px;
+  padding-right: 10px;
+  padding-left: 30px;
+}
+.col-xs-15 {
+  width: 20%;
+  float: left;
+}
+@media (min-width: 768px) {
+  .col-sm-15 {
+    width: 20%;
+    float: left;
+  }
+  .mainContent {
+    padding-left: 0px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@media (min-width: 1200px) {
+  .col-lg-15 {
+    width: 20%;
+    float: left;
+  }
+}
+@import 'home';
+@import 'careers';
+
+@import 'breadcrumbs';
+@import 'header';
+@import 'sidebar';
+@import 'footer';
+@import 'pages';
+@import 'blog';
+
+// @media (max-width: 768px){
+//   .findStore{
+//     .btn{
+//       font-size: 20px;
+//       padding: 0 20%;
+//     }
+//   }
+
+// }
+// .tran{
+//     -webkit-transition: 200ms; /* For Safari 3.1 to 6.0 */
+//     transition: 200ms;
+// }

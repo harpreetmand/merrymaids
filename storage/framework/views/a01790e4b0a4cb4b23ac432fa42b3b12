@@ -1,0 +1,28 @@
+  <?php $__env->startSection('title'); ?><?php $__env->stopSection(); ?>
+  <?php $__env->startSection('description'); ?><?php echo e($body->metaDesc); ?><?php $__env->stopSection(); ?>
+  <?php $__env->startSection('content'); ?>
+  <?php echo $__env->make('layout.slider', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <div class="container topPadding">
+    <?php echo $__env->make('layout.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <div class="clear hidden-sm hidden-md hidden-lg">
+    </div>
+    <div class="col-md-9 col-sm-8 col-xs-12">
+      <h2><?php echo e($body->title); ?></h2>
+      <h3><?php echo e($body->h3); ?></h3>
+      <?php echo $body->body; ?>
+
+    </div>
+  </div>
+  <div class="container borderTop">
+    <div class="col-sm-12 testimonials noPadding">
+      <div class="col-sm-3">
+          <a href="<?php echo e(asset('/why-merry-maids/testimonials')); ?>"><img src="<?php echo e(asset('/img/testimonials/'.$testimonials->image)); ?>" class="img-responsive"></a>
+      </div>
+      <div class="col-sm-9">
+        <i class="quotesBottomPage fa fa-quote-left"></i><p><a href="<?php echo e(asset('/why-merry-maids/testimonials')); ?>"><?php echo e($testimonials->body); ?></a><i class="fa fa-quote-right"></i></p>
+        <span class="pull-right">-<?php echo e($testimonials->location); ?></span>
+      </div>
+    </div>
+  </div>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

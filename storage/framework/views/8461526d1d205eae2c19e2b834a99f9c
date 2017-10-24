@@ -1,0 +1,53 @@
+<?php $__env->startSection('title'); ?>Career Opportunities | <?php $__env->stopSection(); ?>
+<?php $__env->startSection('description'); ?><?php $__env->stopSection(); ?>
+<?php $__env->startSection('content'); ?>
+
+
+
+
+
+
+<div class="container">
+    <div class="pagesTopImage">
+      <div class="imgBackground">
+        <img src="<?php echo e(asset('/imgs/careers.jpg')); ?>" alt="Careers" class=""/>
+        <div class="textSkew green">
+          <div class="text">
+            Joining a great team starts here
+          </div>
+        </div>
+      </div>
+    </div>
+ <?php echo $__env->make('layout.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+  <div class="clear visible-sm visibile-xs">
+  </div>
+  <div class="col-md-9 col-sm-8 col-xs-12 mainContent">
+ <?php echo $__env->make('layout.breadcrumbs', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+  <h2>Career Opportunities</h2>
+  <div class="biggerFont">Positions Available</div><br/>
+
+  <?php foreach($body as $careers): ?>
+    <div class="col-sm-12">
+        <h4><?php echo e($careers->title); ?></h4>
+        <p><?php echo e($careers->shortDesc); ?></p>
+        <a href="<?php echo e(asset('/career-opportunities/'.$careers->slug)); ?>"><button class="btn btn-primary">Click here for details</button></a>
+        <br/><br/>
+    </div>
+  <?php endforeach; ?>
+
+<h4>What you can expect working for Merry Maids</h4>
+            <video controls class="img-responsive" poster="<?php echo e(asset('/imgs/career-image.png')); ?>">
+              <source src="<?php echo e(asset('/imgs/career-video.mp4')); ?>" type="video/mp4">
+              <!--<source src="movie.ogg" type="video/ogg">  -->
+              Your browser does not support the video tag.
+            </video>
+</div>
+ 
+ 
+</div>
+<br/>
+<?php echo $__env->make('layout.testimonials', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>;
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layout.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

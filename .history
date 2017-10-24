@@ -1,0 +1,200 @@
+#+1464618885
+ls
+#+1464618886
+cd
+#+1464618887
+ls
+#+1464618889
+cd www.merrymaids.ca/
+#+1464618889
+ls
+#+1464618893
+cd ..
+#+1464618895
+cd ..
+#+1464618895
+ls
+#+1464618896
+cd ..
+#+1464618896
+ls
+#+1464618898
+cd ..
+#+1464618898
+ls
+#+1464618904
+cd lib
+#+1464618905
+ls
+#+1464618909
+cd ..
+#+1464618909
+cd usr
+#+1464618910
+ls
+#+1464618911
+cd lib
+#+1464618912
+ls
+#+1464618929
+php --ini
+#+1464618936
+cd /usr/local/etc
+#+1464618937
+ls
+#+1464618942
+open php.ini
+#+1464618951
+atom php.ini
+#+1464618955
+edit php.ini
+#+1464618998
+ls
+#+1464619003
+php --ini
+#+1464619007
+cd/usr/local/etc
+#+1464619012
+cd /usr/local/etc
+#+1464619033
+vi php.ini
+#+1464619088
+ls
+#+1464619282
+php --init
+#+1464619288
+cd /usr
+#+1464619288
+ls
+#+1464619291
+cd lib
+#+1464619291
+ls
+#+1464619293
+cd ..
+#+1464619293
+ls
+#+1464619299
+php --init
+#+1464619306
+php --ini
+#+1464619320
+cd /usr/local/etc
+#+1464619321
+ls
+#+1464619372
+vi php.ini
+#+1464621797
+ls
+#+1464621800
+cd www.merrymaids.ca/
+#+1464621801
+ls
+#+1464621814
+mv merrymaidsbeta ..
+#+1464621815
+ls
+#+1464621815
+cd ..
+#+1464621816
+ls
+#+1464621825
+cd merrymaidsbeta
+#+1464621826
+ls
+#+1464621828
+mv * ..
+#+1464621829
+cd ..
+#+1464621829
+ls
+#+1464621863
+cd www.merrymaids.ca
+#+1464621864
+ls
+#+1464621880
+cd ..
+#+1464621880
+ls
+#+1464621888
+zip -r mmold www.merrymaids.ca/
+#+1464621932
+ls
+#+1464621941
+ls
+#+1464621955
+cd www.merrymaids.ca/
+#+1464621956
+ls
+#+1464621966
+mkdir old-stuff
+#+1464621980
+mv * old-stuff
+#+1464622302
+ls
+#+1464622360
+cd ls
+#+1464622361
+cd ..
+#+1464622362
+ls
+#+1464622365
+cd www.merrymaids.ca/
+#+1464622365
+ls
+#+1464622371
+unzip mmbeta.zip
+#+1464622648
+ls
+#+1464622649
+cd ..
+#+1464622650
+ls
+#+1464622652
+cd www.merrymaids.ca/
+#+1464622652
+ls
+#+1464622657
+rm -rf app
+#+1464622665
+ls
+#+1464622672
+cd ..
+#+1464622672
+ls
+#+1464622673
+cd www.merrymaids.ca/
+#+1464622682
+rm -rf bower_components
+#+1464622686
+rm -rf config
+#+1464622689
+rm -rf database
+#+1464622697
+rm -rf laravel-grunt node_modules
+#+1464622706
+rm -rf public resources revolution src
+#+1464622712
+rm -rf storage tests vendor
+#+1471362709
+ls
+#+1471362714
+cd public_html
+#+1471362719
+cd public
+#+1471362909
+ls
+#+1471362916
+rm -rf mmbeta.zip
+#+1471362983
+rm -rf mmold.zip
+#+1471362984
+ls
+#+1471362995
+ls
+#+1471363003
+ls
+#+1471363015
+zip -r mmbu.zip
+#+1471363018
+zip -r mmbu.zip *

@@ -1,0 +1,1298 @@
+ //Changed Nav Globally
+
+//  @media(max-width:768px){
+//   .poll{
+//   .navbar{
+//     .container-fluid{
+//       display:block;
+//     }
+//   }
+// }
+// }
+// @media (max-width:768px){
+    
+//   .navbar-nav > li{
+//     width:100%;
+//   }
+@media (max-width:992px){
+   .navbar-nav > li{
+      
+    }
+}
+.voteOpen {
+  @include border($darkBlue);
+  background-color: $darkBlue;
+  color: #fff;
+  text-align: center;
+  .biggerTitle {
+    line-height: 1;
+    padding: 20px 10px 10px;
+  }
+  .clickToVote {
+    background-color: $lightBlue;
+    font-size: 28px;
+    padding: 15px 2px;
+    border-bottom: 4px solid $orange;
+    a {
+      color: #fff;
+    }
+  }
+}
+.awardPresentation {
+  @include border($darkBlue);
+text-align: center;
+  .biggerTitle {
+    font-size: 30px;
+    background-color: $darkBlue;
+    font-weight: 400;
+    line-height: 1.1;
+  }
+  .padd {
+    width: 80%;
+    font-size: 20px;
+    margin: 0 auto;
+  }
+  .clickToVote {
+      display: inline-block;
+    color: $darkBlue;
+    .col-sm-10{
+      margin-top: 10px;
+    }
+    .col-sm-2{
+      padding-left: 10px;
+    }
+  }
+}
+
+.nomImg{
+      padding: 25px;
+
+      img{
+        border: 3px solid $darkBlue;
+      }
+      .nomTitle{
+        height: 50px;
+      }
+}
+
+.comment-form-url {
+  display: none;
+}
+
+.headerImage {
+  background: url("../../../uploads/2017/05/TR_OBIA_web_redesign_Home_Nominate_Rev_V2.jpg") center no-repeat;
+  background-size: cover;
+  height: 480px; //       filter: blur(5px);
+  //   -webkit-filter: blur(5px);
+  .overlay {
+    background: $lightBlue;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+  }
+}
+.comment{
+  border-bottom: dotted thin;
+  margin-bottom: 20px;
+}
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  color: $orange;
+}
+    .recipientPic{
+      width: 350px;
+    }
+
+.navbar {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1031;
+  border-radius: 0;
+  top: 80px;
+  background-color: $darkBlue;
+  border: $darkBlue;
+  font-size: 15px;
+  .navbar-nav > li > a {
+    color: #fff;
+  }
+
+
+  .dropdown-menu {
+    background-color: transparent;
+    padding: 0;
+    border: none;
+    li {
+      a {
+        background-color: $darkBlue;
+        padding: 10px;
+        margin: 2px;
+
+      }
+       &:hover {
+          background-color: $orange;
+        }
+    }
+    .active {
+      a {
+        background-color: $orange;
+      }
+    }
+  }
+  .dropdown-menu > li > a {
+    color: #fff;
+  }
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+  background-color: $orange;
+  color: $textColor;
+}
+a:hover {
+  color: $orange;
+}
+.underNav {
+  color: #fff;
+  left: 0%;
+  position: absolute;
+  right: 0%;
+  top: 180px;
+  img {
+    width: 250px;
+  }
+  .text {
+    top: 40px;
+    .year {
+      color: $lightGreen;
+      font-size: 145px;
+      font-weight: 600;
+      float: left;
+      line-height: 0.8;
+    }
+    .underNavBigger {
+      font-size: 58px;
+      line-height: 1;
+    }
+    .underNavSmall {
+      font-size: 45px;
+    }
+  }
+}
+/*body for homw*/
+.underMainImage {
+  margin-top: 50px;
+}
+.categories {
+  font-size: 15px;
+  .fiveCate {
+    min-width: 190px;
+  }
+  .title {
+    background-color: $lightBlue;
+    color: #fff;
+    padding: 8px;
+    height: 100px;
+    position: relative;
+    .vAllign {
+      padding: 15px;
+      left: 0;
+    }
+  }
+  .text {
+    margin-top: 10px;
+    text-align: left;
+    margin-bottom: 10px;
+    height: 175px;
+  }
+}
+.biggerTitle {
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 0.8;
+  color: #fff;
+  padding: 30px 10px;
+  span {
+    font-weight: 300;
+    position: relative;
+    font-size: 30px;
+  }
+}
+.nominate {
+  @include border($darkBlue);
+  .backPic {
+    background: url("/obia-awards-excellence/img/nominate-person.jpg") center no-repeat;
+    background-size: cover;
+    height: 546px;
+  }
+  .title {
+    background-color: $lightBlue;
+    color: #fff;
+  }
+  .nominateForm {
+    color: $placeHolderColor;
+    padding-left: 50px;
+    text-align: left;
+    font-size: 14px;
+    i {
+      background-color: $orange;
+      border-radius: 100px;
+      font-size: 40px;
+      color: white;
+      padding: 12px 15px;
+      left: -30px;
+    }
+    input[type="text"],
+    input[type="email"],
+    textarea,
+    select {
+      width: 100%;
+      border: 1px solid $darkBlue;
+      font-size: 15px;
+      padding: 8px;
+    }
+    select {
+      -webkit-appearance: button;
+      -moz-appearance: button;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -webkit-padding-end: 20px;
+      -moz-padding-end: 20px;
+      -webkit-padding-start: 2px;
+      -moz-padding-start: 2px;
+      background-image: url("/obia-awards-excellence/img/dropdown-arrow.png");
+      /* For Chrome and Safari */
+      background-image: url("/obia-awards-excellence/img/dropdown-arrow.png");
+      /* For old Fx (3.6 to 15) */
+      background-image: url("/obia-awards-excellence/img/dropdown-arrow.png");
+      /* For pre-releases of IE 10*/
+      background-image: url("/obia-awards-excellence/img/dropdown-arrow.png");
+      /* For old Opera (11.1 to 12.0) */
+      background-image: url("/obia-awards-excellence/img/dropdown-arrow.png");
+      /* Standard syntax; must be last */
+      background-position: center right;
+      background-repeat: no-repeat;
+      border: 1px solid $darkBlue;
+      border-radius: 0;
+      color: $placeHolderColor;
+      font-size: 15px;
+      margin: 0;
+      overflow: hidden;
+      background-size: 20px;
+      padding: 8px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .submitNomination {
+      padding: 20px 0 10px;
+      border-bottom: solid 8px $orange;
+      color: $darkBlue;
+    }
+    .wpcf7 {
+      margin-top: 15px;
+    }
+  }
+}
+.nominateClosed{
+  .biggerTitle{
+    line-height: 1;
+  }
+  .text{
+    color: $darkBlue;
+    text-align: left;
+    .bigger{
+      display: block;
+    }
+    .moreText{
+      font-size: 20px;
+      margin-left: 15px;
+      display: block;
+    }
+    .biggerTitle{
+      color: $darkBlue;
+      display: block;
+      padding-bottom: 0px;
+      
+  }
+  }
+
+
+}
+.votingBox {
+  background-color: $darkBlue;
+  @include border($orange);
+}
+.hideThis {
+  visibility: hidden;
+}
+.pastAward {
+  @include border($darkBlue);
+  .rightSide {
+    color: #fff;
+    background-color: $orange;
+    min-height: 130px;
+    text-align: center;
+    .vAllign {
+      top: 50%;
+      position: absolute;
+      width: 100%;
+      transform: translate(-50%, -50%);
+      font-size: 35px;
+      left: 50%;
+    }
+  }
+}
+.threeLinks {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  a {
+    color: $textColor;
+    span {
+      padding: 20px;
+      width: 370px;
+      margin: 5px;
+    }
+    &:nth-child(1) {
+      span {
+        @include border($orange);
+        @include hvr-rectangle-in($orange);
+      }
+    }
+    &:nth-child(2) {
+      span {
+        @include border($lightGreen);
+        @include hvr-rectangle-in($lightGreen);
+      }
+    }
+    &:nth-child(3) {
+      span {
+        @include border($lightBlue);
+        @include hvr-rectangle-in($lightBlue);
+      }
+    }
+  }
+}
+.jumbotron {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eae5ee;
+  footer {
+    font-size: 12px;
+    span {
+      font-size: 14px;
+      padding-bottom: 10px;
+      display: inline-block;
+    }
+    center {
+      margin-top: 25px;
+    }
+  }
+}
+.winners {
+  .full-bio {
+    position: absolute;
+    bottom: 0px;
+  }
+  .all {
+    display: inline-block;
+    width: 100%;
+    .titleLink {
+      font-size: 25px;
+      display: inline-block;
+    }
+    i {
+      background-color: $orange;
+      border-radius: 100px;
+      font-size: 26px;
+      color: white;
+      padding: 7px 9px;
+    }
+    img {
+      margin: 0 auto;
+    }
+    .obioLogo {
+      max-width: 160px;
+    }
+  }
+}
+.profile {
+  .picBorder{
+        border: thin solid;
+        margin: 6px 15px 6px 0px;
+ border: 4px solid $darkBlue;
+        
+  }
+  .main-face {
+    // float: left;
+    // padding-right: 50px;
+    // padding-bottom: 20px;
+    // border: 4px solid $darkBlue;
+  }
+  .recipient-person {
+    font-size: 22px;
+    margin-bottom: 35px;
+    &.description {
+      margin-bottom: 15px;
+    }
+  }
+  .learn-more {
+
+  }
+  i {
+    background-color: $lightBlue;
+    border-radius: 100px;
+    font-size: 24px;
+    color: white;
+    padding: 7px 9px;
+  }
+  .otherNominated {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-around;
+    .people {
+      margin: 0 4px 15px;
+      width: 190px;
+      display: inline-block;
+      i {
+        background-color: #fcb31b;
+        border-radius: 100px;
+        font-size: 16px;
+        color: white;
+        margin-left: 10px;
+        margin-top: 5px;
+      }
+    }
+    .people > a {
+      display: block;
+      color: #000;
+      min-height: 240px;
+      img{
+        border: thin solid $orange;
+      }
+      span {
+        color: #42ACCF;
+        display: block;
+        padding-top: 9px;
+        font-weight: 600;
+        min-height: 45px;
+      }
+    }
+  }
+}
+.flex-container {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+.flex-item {
+  padding: 10px;
+  width: 230px;
+}
+.contactUs {
+  .sendMessage {
+    border-bottom: solid 8px $orange;
+    display: table;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea,
+  select {
+    width: 100%;
+    border: 1px solid $darkBlue;
+    font-size: 15px;
+    padding: 8px;
+  }
+}
+
+// breadcrumb
+#breadcrumbs {
+  font-size: 12px;
+  margin: 18px auto 0;
+}
+
+.comments {
+  font-weight: normal;
+  input, textarea {
+    width: 100%;
+    border: 1px solid #2e0058;
+    font-size: 15px;
+    padding: 8px;
+  }
+  #respond {
+    max-width: 500px;
+    label {
+      font-weight: normal !important;
+    }
+  }
+  #submit {
+    padding: 20px;
+    color: #fff;
+    background-color: #39b0d0;
+    border-radius: 0px;
+    border: none;
+  }
+}
+
+  .nominateClosed{
+  .text{
+margin-top: -20px;
+  }
+  }
+
+
+
+@media (min-width: 1200px) {
+  .nominateClosed{
+  .text{
+    margin-top: 45px;
+  }
+
+}
+  .winners {
+    .box {
+      min-height: 252px;
+    }
+  }
+}
+@media (max-width: 1200px) {
+   .navbar {
+    .container-fluid {
+      width: 820px;
+      // height: 52px;
+      // overflow: auto;
+    }
+        .threeLinks {
+
+      a {
+  
+        span {
+   
+          width: 305px;
+ 
+        }
+      }
+    }
+
+  }
+  .underNav {
+    img {
+      width: 250px;
+    }
+    .text {
+      top: 40px;
+      .year {
+        font-size: 125px;
+        line-height: 0.8;
+      }
+      .underNavBigger {
+        font-size: 50px;
+        line-height: 1;
+      }
+      .underNavSmall {
+        font-size: 39px;
+      }
+    }
+  }
+  .winners {
+    .box {
+      min-height: 205px;
+    }
+  }
+  .profile {
+  }
+}
+@media (max-width: 992px) {
+   .navbar {
+    .container-fluid {
+      width: 798px;
+      font-size: 13px
+      // height: 52px;
+      // overflow: auto;
+    }
+  }
+
+    
+      .voteOpen {
+        max-width: 400px;
+            margin: 0 auto;
+      }
+      .awardPresentation {
+        max-width: 400px;
+        margin: 0 auto;
+        .padd {
+          width: 100%;
+
+        }
+
+        .clickToVote {
+          display: block;
+          width: 100%;
+
+        }
+      }
+  .underNav {
+    img {
+      width: 250px;
+    }
+    .text {
+      top: 40px;
+      .year {
+        font-size: 85px;
+        line-height: 0.8;
+      }
+      .underNavBigger {
+        font-size: 35px;
+        line-height: 1;
+      }
+      .underNavSmall {
+        font-size: 26px;
+      }
+    }
+  }
+  .winners {
+    .all {
+      .titleLink {
+        font-size: 20px;
+        margin-bottom: 5px;
+      }
+    }
+    .box {
+      font-size: 14px;
+      min-height: auto;
+    }
+    .full-bio {
+      position: relative;
+      margin-top: 15px;
+    }
+  }
+  .profile .otherNominated .people > a span {
+      min-height: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerImage {
+      height: 340px;
+  }
+  .navbar {
+    top: 0;
+    display: none;
+    padding-top: 60px;
+    // .container-fluid {
+    //   height: 52px;
+    //   overflow: auto;
+    // }
+  }
+  .navbar-toggle {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: 1px solid #2e0058;
+    border-radius: 0px;
+    padding: 10px;
+    margin-right: 0px;
+    z-index: 10000000;
+    .icon-bar {
+      background-color: #2e0058;
+    }
+    &.active {
+      border: 1px solid #FFF;
+      .icon-bar {
+        background-color: #FFF;
+      }
+    }
+  }
+  .underNav {
+    width: 100%;
+    transform: none;
+    left: 0;
+    right: 0;
+    top: 4%;
+    .all {
+      position: absolute;
+      left: 0;
+      right: 0;
+      width: 300px;
+      margin: auto;
+    }
+    img {
+      width: 160px;
+      margin: 0 auto;
+    }
+    .text {
+      top: 40px;
+      .year {
+        font-size: 60px;
+      }
+      .underNavBigger {
+        font-size: 21px;
+      }
+      .underNavSmall {
+        font-size: 17px;
+      }
+    }
+  }
+  .threeLinks a span {
+    width: 310px;
+  }
+  .profile {
+    .main-face {
+      text-align: center;
+      width: 350px;
+    }
+    .otherNominated {
+      display: inherit;
+      justify-content: inherit;
+      .people {
+        width: 48%;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .profile .otherNominated .people {
+    margin: 0 auto 15px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+  }
+  .profile .otherNominated .people > a img {
+    width: 100%;
+  }
+  .profile .otherNominated .people > a span {
+      font-size: 20px;
+  }
+}
+
+//*************NEW HOMEPAGE SASS**************
+
+.nominees-template-default{
+  .poll-photo{
+    display:none;
+  }
+}
+
+ .vote-now-wrapper{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+    h2{
+      font-size: 20px;
+      color:$darkBlue;
+      margin:0;
+      margin-right:10px
+    }
+    i{
+      background: #fcb31b;
+      border-radius: 50%;
+      color: #fff;
+      font-size: 25px;
+      padding: 8px;
+      height:40px;
+      width:40px;
+    }
+}
+
+.fiveCate{
+  position:relative !important;
+}
+
+
+
+.vote-awards-wrapper{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom: 35px;
+  margin-top:109px;
+    .vote-awards-child{
+      height:700px;
+      width:95%;
+      max-width: 558px;
+      border:7px solid $darkBlue;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+        .purple{
+          text-transform:uppercase;
+          background:$darkBlue;
+          color:#fff;
+          height:233px;
+          display:flex;
+          justify-content: center;
+          align-items: center;
+          font-size:21px;
+          margin-bottom:0px;
+        }
+        .awards-heading{
+          background: #fcb31b;
+          margin: 0px;
+          height: 72px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: #fff;
+          font-size: 35px;
+        }
+        ul{
+          height: 188px;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          padding: 19px 0;
+            a{
+              text-decoration:underline;
+            }
+        }
+          
+    }//vote-awards-child
+}
+
+@media(max-width:1200px){
+  .vote-awards-wrapper{
+      flex-direction: column;
+      align-items: center;
+    }
+
+  .first-vote-child{
+    margin-bottom:25px;
+  }
+    .voteOpen {
+
+    .biggerTitle {
+      font-size: 38px;
+    }
+
+  }
+.awardPresentation{
+      .biggerTitle {
+        font-size: 30px;
+        padding: 10px
+      }
+}
+
+
+}
+
+@media(max-width:556px){
+  
+  .vote-awards-child{
+    height: auto;
+    width: 95%;
+  }
+
+  .home-awards-image{
+    object-fit:cover;
+  }
+}
+
+@media(max-width:475px){
+  .awards-para{
+    font-size:18px !important;
+  }
+}
+
+
+
+.awards-para{
+  height: 188px;
+  padding: 14px 10;
+  font-size: 23px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vote-now-image{
+  height: 45%;
+  width: 100%;
+}
+
+.home-awards-image{
+  height:416px;
+  width:100%;
+  
+}
+
+@media (max-width: 1000px){ 
+  .vote-awards-wrapper{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .first-vote-child{
+    margin-bottom:30px;
+  }
+
+}
+
+//Polls
+
+.vote{
+
+  .click-here-link,{
+    text-decoration:underline;
+    color:#000;
+  }
+
+
+
+  h1{
+    text-transform:uppercase;
+    color:$lightBlue;
+    font-size:35px;
+  }
+
+  .wpcf7-validates-as-email{
+    padding: 7px 0 7px 14px;
+    border: thin solid black;
+    width: 47%;
+    min-width: 330px;
+  }
+
+  .email-heading{
+    text-transform:uppercase;
+    color:$darkBlue;
+    margin-bottom: 13px;
+    font-weight:400;
+  }
+  
+  label{
+    padding:0;
+    width: 239px;
+    word-break: break-word;
+    width: 80%;
+    max-width: 240px;
+  }
+
+  h2{
+    margin-top: 0px;
+    margin-bottom: 33px;
+  }
+
+  .poll-heading{
+    border-bottom: none;
+    border-top: 7px solid #fcb31b;
+    text-transform: uppercase;
+    padding-top: 20px;
+    font-size: 37px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+    font-weight:500;
+  }
+
+  .wpcf7-checkbox{
+    img{
+      margin-bottom:20px;
+      width:auto;
+    }
+  }
+
+
+  .poll-list{
+    display:flex;
+    flex-wrap: wrap;
+      i{
+        background-color: $orange;
+        border-radius: 100px;
+        font-size: 33px;
+        color: #fff;
+        padding: 7px 9px;
+        margin-right: 30px;
+        margin-bottom: 28px;
+        margin: 0;
+        transition:all 0.3s linear;
+        transform: translateY(-12px);
+        margin-left: 20px;
+
+      }
+  }
+
+  .wpcf7-list-item{
+    font-size: 22px;
+    display: block;
+    margin: 0;
+    padding: 0 26px;
+    padding-left: 0;
+  }
+
+  .wpcf7-list-item-label{
+    color:$lightBlue;
+    position: relative;
+    left: 20px;
+    text-transform: uppercase;
+    top: -2px;
+    min-height: 70px;
+    display: block;
+  }
+  .bio{
+    display: flex;
+    width: 255px;
+    p{
+        font-size: 19.5px;
+        text-transform: uppercase;
+        color:$darkBlue;
+      }
+  }
+
+  .wpcf7-submit{
+    width: 100%;
+    height: 111px;
+    border: none;
+    background: #39b0d0;
+    color: #fff;
+    border-radius: 11px;
+    font-size: 45px;
+    text-transform: uppercase;
+    box-shadow: 0px 14px 0px 0px #006a93;
+  }
+
+  .wpcf7-mail-sent-ok {
+    border: none;
+    text-align: center;
+    margin-top: 0;
+    text-transform: uppercase;
+    color:#2e0058;
+    font-size: 28px;
+  }
+
+  // .cat-3{
+  //   .img-icon-wrapper{
+  //     height:480px;
+  //   }
+  //   .bio{
+  //     bottom:-3px;
+  //   }
+  // }
+
+  .search{
+    display:none;
+  }
+ 
+  .poll-photo{
+      width:auto;
+  }
+
+  .post-edit-link{
+    display:none;
+  }
+
+  .one-vote{
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 30px;
+  }
+
+  .bio:nth-child(2){
+    height:50px;
+  }
+
+  .page-template-home, .page-template-page-poll-php{
+    overflow-x:hidden;
+}
+
+.img-icon-wrapper{
+  p:first-of-type{
+
+  }
+}
+
+.cat-3{
+  .img-icon-wrapper{
+    p:first-of-type{
+
+    }
+  }
+}
+
+ 
+
+  //**************** Media Queries **************** //
+
+  @media (max-width: 1200px){
+
+    .navbar .navbar-nav > li > a {
+      color: #fff;
+      font-size: 10.5px;
+    }
+
+    .img-icon-wrapper{
+      flex-basis:33.3%;
+    }
+
+    
+  }
+
+  @media (max-width: 992px){
+
+    .navbar-nav > li{
+      
+    }
+
+    .wpcf7-submit{
+      font-size:36px;
+      height: 90px;
+    }
+
+    .img-icon-wrapper{
+      flex-basis:50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .poll-heading, .one-vote{
+      text-align:center;
+    }
+  }
+
+  @media (max-width: 570px){
+    .img-icon-wrapper{
+      flex-basis:100%;
+    }
+
+    .wcpf7-submit{
+      display:flex;
+      justify-content:center;
+      width:85%;
+      font-size:23px;
+
+    }
+  }
+
+ 
+
+  @media (max-width:715px){
+
+    .wpcf7-form-control{
+      font-size:4vw;
+    }
+
+    
+  }
+
+//****Checkbox***//
+
+// input[type="checkbox"]:before {
+// 	position: absolute;
+//   width: 38px;
+//   background: #fff;
+//   height: 38px;
+//   content: "";
+//   border: 5.2px solid $lightBlue;
+//   bottom: -24px;
+// }
+
+// input:before {
+// 	position: absolute;
+//   width: 38px;
+//   background: #fff;
+//   height: 38px;
+//   content: "";
+//   border: 5.2px solid $lightBlue;
+//   bottom: -24px;
+// }
+
+// input[type="checkbox"]:checked:after {
+//     position: absolute;
+//     width: 10px;
+//     height: 10px;
+//     margin-left: -5px;
+//     margin-top: -4px;
+//     content: "✓";
+//     height: 41px;
+//     width: 19px;
+//     -webkit-transform: rotate(7deg) skew(0deg);
+//     left: 9px;
+//     bottom: 6px;
+//     font-size: 65px;
+
+// }
+
+// input[type="checkbox"]:hover:checked:after {
+//   border-color: $darkBlue;
+// }
+
+// input[type="checkbox"]{
+//   margin-left:0;
+// }
+.radio input[type="radio"], .radio-inline input[type="radio"], .checkbox input[type="checkbox"], .checkbox-inline input[type="checkbox"]{
+  margin-left: 0px;
+}
+.clickBox{
+  position:relative;
+}
+.img-icon-wrapper {
+  position: relative;
+  width: 285px;
+  padding-left: 0px;
+  overflow-y: hidden;
+}
+
+.cat-3,
+.cat-4 {
+  .poll-photo {
+    border: 4px solid $darkBlue;
+  }
+}
+
+.heading-paragraph {
+  padding: 15px 0
+}
+
+.cat-4 {
+  .img-icon-wrapper {
+    height: 452px;
+    p:first-of-type {
+      height: 370px;
+    }
+  }
+}
+
+
+@media (max-width:992px) {
+  .vote .cat-4 .img-icon-wrapper p:first-of-type {
+    height: 340px;
+  }
+}
+@media (max-width:768px) {
+  .vote .cat-4 .img-icon-wrapper {
+    height: 400px;
+  }
+.cat-4 {
+  .img-icon-wrapper {
+    height: 400px;
+    p:first-of-type {
+      height: 335px;
+    }
+  }
+}
+
+}
+@media (max-width:570px) {
+  .wpcf7-list-item-label {
+
+    min-height: auto;
+
+  }
+
+  .vote .cat-4 .img-icon-wrapper p:first-of-type {
+    height: auto;
+  }
+  .vote .cat-4 .img-icon-wrapper {
+    height: auto;
+  }
+}
+
+
+
+
+
+
+
+}//Poll Page Wrapper
+

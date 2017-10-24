@@ -1,0 +1,40 @@
+  <?php $__env->startSection('title'); ?>Blog | <?php $__env->stopSection(); ?>
+  <?php $__env->startSection('description'); ?>Read Merry Maids of Oakville blog to stay up to date about your cleaning services <?php $__env->stopSection(); ?>
+  <?php $__env->startSection('content'); ?>
+  <div class="container">
+    <div class="pagesTopImage">
+      <div class="imgBackground">
+        <img src="<?php echo e(asset('/imgs/move-in-move-out-cleaning.jpg')); ?>" alt="Merry Maids Oakville BLog" class="t" class="img-responsive"/>
+        <div class="textSkew color1">
+          <div class="text">
+            Merry Maids of Oakville has been a part of the Oakville community since 1993
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <?php echo $__env->make('layout.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <div class="clear hidden-lg hidden-md hidden-sm">
+    </div>
+    <div class="col-md-9 col-sm-8 col-xs-12 besideSideBar">
+  <?php echo $__env->make('layout.breadcrumbs', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <h1 class="blog-header">Merry Maids of Oakville Blog</h1>
+     <?php foreach($body as $blogpost): ?>
+     <div class="post-container">
+    <?php if($blogpost->image): ?> 
+      <img src="<?php echo e(asset('/imgs/'.$blogpost->image)); ?>" alt="<?php echo e($blogpost->title); ?>" class="img-responsive blog-img"/> 
+    <?php endif; ?>
+    
+      <a href="<?php echo e(asset('about-merry-maids/blog/'.$blogpost->slug)); ?>"><h3 class="post-title"> <?php echo e($blogpost->title); ?></h3></a>
+      <p class="blog-date"><?php echo e(date("F-d-Y", strtotime($blogpost->date))); ?></p>
+      <p><?php echo e($blogpost->briefDesc); ?></p>
+      <a href="<?php echo e(asset('about-merry-maids/blog/'.$blogpost->slug)); ?>" class="btn btn-primary">Read More</a>
+      <hr>
+    </div>
+    <?php endforeach; ?>
+  </div>
+  </div>
+  <?php echo $__env->make('layout.testimonials', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>;
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

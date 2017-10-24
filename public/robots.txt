@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /franchise-opportunities/franchisse-testimonials
+Disallow: /merry-maids-locator/ontario/merry-maids-of-uxbridge
+Disallow: /merry-maids-locator/alberta/merry-maids-of-calgary-s-w
+Disallow: /merry-maids-locator/new-brunswick/merry-maids-of-saint-john

@@ -1,0 +1,31 @@
+  
+  <?php $__env->startSection('title'); ?><?php echo e($body->title); ?> | <?php $__env->stopSection(); ?>
+  <?php $__env->startSection('description'); ?><?php echo e($body->metaDesc); ?> <?php $__env->stopSection(); ?>
+  <?php $__env->startSection('content'); ?>
+  <div class="container">
+    <div class="pagesTopImage">
+      <div class="imgBackground">
+        <img src="<?php echo e(asset('/imgs/move-in-move-out-cleaning.jpg')); ?>" alt="Merry Maids Oakville BLog" class="t"/>
+        <div class="textSkew color1">
+          <div class="text">
+            <?php echo e($body->title); ?> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <?php echo $__env->make('layout.sidebar', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <div class="clear hidden-lg hidden-md hidden-sm">
+    </div>
+    <div class="col-md-9 col-sm-8 col-xs-12 besideSideBar">
+  <?php echo $__env->make('layout.breadcrumbs', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+    <img src="/mm-online/public/imgs/<?php echo e($body->image); ?>" class="single-blog-img img-responsive"/>
+    <h1 class="single-blog-header"><?php echo e($body->title); ?></h1>
+    <p><?php echo e(date("F-d-Y", strtotime($body->date))); ?></p>
+    <p> <?php echo $body->body; ?> </p>
+
+  </div>
+  </div>
+  <?php echo $__env->make('layout.testimonials', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('layout.app', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

@@ -1,0 +1,296 @@
+<div class="container">
+  <center>
+   <div class='row'>
+     <div class='col-xs-12 bottomSlider'>
+       <div class="carousel slide media-carousel" id="media">
+         <div class="carousel-inner">
+           <div class="item  active">
+             <div class="row">
+               <div class="col-sm-4">
+                 <a class="thumbnail" href="<?php echo e(url('/promotions/gift-cards')); ?>"><img alt=" Give A Gift" src="<?php echo e(asset('/img/givegift.jpg')); ?>">
+                 <div class="big">
+                   Give a Gift
+                 </div>
+                 <div class="small">
+                   of Time
+                 </div>
+                 </a>
+               </div>
+               <div class="col-sm-4">
+                 <a class="thumbnail" href="<?php echo e(url('about-us/contact-us')); ?>"><img alt="Request A Quote" src="<?php echo e(asset('/img/requestquote.jpg')); ?>">
+                   <div class="small">
+                     Request a
+                   </div>
+                   <div class="big">
+                     Quote
+                   </div>
+                 </a>
+               </div>
+               <div class="col-sm-4">
+                 <a class="thumbnail" href="<?php echo e(url('/promotions/promotions')); ?>"><img alt="Save Now" src="<?php echo e(asset('/img/savenow.jpg')); ?>">
+                   <div class="big">
+                     Save Now
+                   </div>
+                   <div class="small">
+                     Find out more
+                   </div>
+                 </a>
+               </div>
+             </div>
+           </div>
+           <div class="item">
+             <div class="row">
+               <div class="col-sm-4">
+                 <a class="thumbnail" href="<?php echo e(url('/contact/career-opportunities')); ?>"><img alt="Tips for More Sparkle & Shine" src="<?php echo e(asset('/img/sprakleshine.jpg')); ?>">
+                   <div class="small">
+                Career
+                   </div>
+                   <div class="big">
+                     Opportunities
+                   </div></a>
+               </div>
+               <div class="col-sm-4">
+                 <a class="thumbnail" href="<?php echo e(url('/cleaning-services')); ?>"><img alt="The Cleaning Details" src="<?php echo e(asset('/img/cleandetails.jpg')); ?>">
+                   <div class="small">
+                     The Clean is in the
+                   </div>
+                   <div class="big">
+                     The Details
+                   </div></a>
+               </div>
+               <div class="col-sm-4">
+                 <a class="thumbnail" href="<?php echo e(url('/why-merry-maids/maids-you-can-trust')); ?>"><img alt="Experienced and Reliable Staff" src="<?php echo e(asset('/img/ourpeople.jpg')); ?>">
+                   <div class="small">
+                     Experienced. Reliable.
+                   </div>
+                   <div class="big">
+                     Our People
+                   </div></a>
+               </div>
+             </div>
+           </div>
+         </div>
+         <a data-slide="prev" href="#media" class="left carousel-control"><em class="fa fa-caret-left"></em></a>
+         <a data-slide="next" href="#media" class="right carousel-control"><em class="fa fa-caret-right"></em></a>
+       </div>
+     </div>
+   </div>
+  </center>
+</div>
+<footer>
+  <div class="container">
+    <div class="row topPadding greenLineTop">
+      <div class="greenLine">
+        <img src="<?php echo e(asset('/img/merrymaidsrelax.png')); ?>" class="pull-right" alt="Merry Maids relax. it's done">
+        <div class="clear"></div>
+      </div>
+
+
+
+      <div class="row footerLinks hidden-sm hidden-xs">
+        <?php foreach($data['nav'] as $footer): ?>
+          <?php if($footer->parent == 0): ?>
+            <div class="col-sm-15">
+              <ul>
+                <li><a href="<?php echo e(asset($footer->slug)); ?>"><?php echo e($footer->name); ?></a></li>
+                <?php foreach($data['nav'] as $foot): ?>
+                   <?php if($footer->id == $foot->parent): ?>
+                     <li><a href="<?php echo e(asset($foot->slug)); ?>"><?php echo e($foot->name); ?></a></li>
+                   <?php endif; ?>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      </div>
+    </div>
+    <div class="center">
+    <div class="footerSocialButtons">
+
+        <?php if($data['allPages']->facebook): ?><a target="_blank" href="<?php echo e($data['allPages']->facebook); ?>"><em class="fa fa-facebook"></em></a><?php endif; ?>
+        <?php if($data['allPages']->twitter): ?><a target="_blank" href="<?php echo e($data['allPages']->twitter); ?>"><em class="fa fa-twitter"></em></a><?php endif; ?>
+        <?php if($data['allPages']->linkedin): ?><a target="_blank" href="<?php echo e($data['allPages']->linkedin); ?>"><em class="fa fa-linkedin"></em></a><?php endif; ?>
+        <?php if($data['allPages']->googlePlus): ?><a target="_blank" href="<?php echo e($data['allPages']->googlePlus); ?>"><em class="fa fa-google-plus"></em></a><?php endif; ?>
+        <?php if($data['allPages']->youtube): ?><a target="_blank" href="<?php echo e($data['allPages']->youtube); ?>"><em class="fa fa-youtube"></em></a><?php endif; ?>
+        <?php if($data['allPages']->yelp): ?><a target="_blank" href="<?php echo e($data['allPages']->yelp); ?>"><em class="fa fa-yelp"></em></a><?php endif; ?>
+
+    </div>
+    <div class="clear"></div>
+<div class="topMore">
+ 
+        <div class="bottomLogo">     
+            
+                <a target="_blank" href="https://chfa.ca"><img class="img-responsive" src="<?php echo e(asset('/img/cfa.jpg')); ?>" alt="CFA awards pf excellence"></a>
+            
+            
+                <img class="img-responsive" src="<?php echo e(asset('/img/35years.jpg')); ?>" alt="Celebrating 35 years">
+            
+            
+                <a target="_blank" href="https://www.womenschoiceaward.com/"><img class="img-responsive" src="<?php echo e(asset('/img/women-choice-award.jpg')); ?>" alt="Women's Choice Awards'"></a>
+            
+            
+                <a target="_blank" href="http://cleaningforareason.org/"><img class="img-responsive" src="<?php echo e(asset('/img/cleaning-for-reason.jpg')); ?>" alt="Cleaning for a reason'"></a>
+            
+        </div>
+
+    <div class="grayLogos">
+  <!--  <div class="flex-container ">
+     
+ <span class="flex-item">
+        <a target="_blank" href="http://www.servicemaster.ca/"><img src="<?php echo e(asset('/img/servicemaster.jpg')); ?>" alt="Service Master"></a>
+ </span>
+   <span class="flex-item">
+        <img src="<?php echo e(asset('/img/merrymaids_dark.jpg')); ?>" alt="merry maids relax its done">
+ </span>
+   <span class="flex-item">
+  
+        <em class="fa fa-cc-mastercard"></em>
+        <em class="fa fa-cc-visa"></em>
+        <em class="fa fa-cc-amex"></em>
+     </span>
+</div>-->
+
+
+      <div class="footerExtra">
+        *Value varies based on the size of the home. Not valid with other offers.<br/>
+Merry Maids also offers AIR MILES® reward miles. Ask us for more details. ® ™ Trademarks of AIR MILES International Trading B.V. Used under license by LoyaltyOne, Inc. and Merry Maids of Canada.
+Services provided by independently owned and operated franchises. Employment hiring and screening practices may vary. Please contact your local Merry Maids office for more details.
+© Copyright <?php echo e(date("Y")); ?> Merry Maids Canada and ServiceMaster Canada. All rights reserved. <br><br>
+<a target="_blank" href="http://www.servicemaster.ca/"><img src="<?php echo e(asset('/img/servicemaster.jpg')); ?>" alt="Service Master"></a>
+        <img src="<?php echo e(asset('/img/merrymaids_dark.jpg')); ?>" alt="merry maids relax its done">
+        <img src="<?php echo e(asset('/img/credit-cards.jpg')); ?>" alt="credit cards"><br/><br>
+
+        <a href="http://limeadvertising.com/" target="_blank">Designed and developed by Lime Advertising Inc.</a> | <a target="_blank" href="http://merrymaids.ca/privacy-policy">Privacy Policy</a>
+      </div>
+
+    </div>
+</div>
+    <div class="cf"></div>
+
+  </div>
+</div>
+</footer>
+
+
+<!-- Modal for when user clicks on email -->
+<div class="modal fade" id="clickEmailModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Information Request</h4>
+            </div>
+            <div class="modal-body">
+                
+  <?php echo Form::open(array('action' => 'FormController@getEmailForm', 'class' => 'form')); ?>
+
+        <?php if(count($errors) > 0 && $errors[0]== 'Email Form' ): ?>        
+            <ul class="errors">
+                <?php foreach($errors[1] as $error): ?>
+                    <li>- <?php echo e($error); ?></li>
+                <?php endforeach; ?>
+            </ul>
+        <?php endif; ?>
+
+        <div class="form-group">
+            
+                <?php echo Form::label('email', '*Email'); ?>
+
+           
+                <?php echo Form::text('email', null, array('required', 'class'=>'form-control')); ?>
+
+            
+            <div class="clear"></div>
+        </div>
+        <div class="form-group hidden">
+            
+                <?php echo Form::label('require', '*Required'); ?>
+
+           
+                <?php echo Form::text('require', null, array( 'class'=>'form-control')); ?>
+
+            
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            
+                <?php echo Form::label('postal_code', '*Postal Code'); ?>
+
+           
+                <?php echo Form::text('postal_code', null, array('required', 'class'=>'form-control')); ?>
+
+            
+            <div class="clear"></div>
+        </div>
+        <div class="form-group hidden">
+            
+                <?php echo Form::label('typeOfForm', '*type'); ?>
+
+           
+                <?php echo Form::text('typeOfForm', 'Email Form', array('required', 'class'=>'form-control', 'readonly' => 'true')); ?>
+
+            
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+        
+                <?php echo Form::label('message','Message'); ?>
+
+          
+                <?php echo Form::textarea('message', null, array('class'=>'form-control')); ?>
+
+           
+            <div class="clear"></div>
+        </div>
+                <div class="form-group">
+            <div class="col-xs-1">
+                <?php echo Form::checkbox('anti_spam', 'yes'); ?>
+
+            </div>
+            <div class="col-xs-11 anti-spam">
+                <?php echo Form::label('anti_spam','Canada’s new anti-spam legislation requires us to have your consent to send you emails. Please
+                check this box to confirm your consent to receive electronic messages from Merry Maids.'); ?>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+        <div class="form-group">
+            <?php echo Form::submit('Contact Us!', 
+              array('class'=>'btn btn-primary')); ?>
+
+        </div>
+
+  <?php echo Form::close(); ?>
+
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<?php if(!empty($lightbox)): ?>
+<!-- Modal if there is data in lightboxHome in db -->
+<div class="modal fade" id="lightboxHome" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <?php if($lightbox->title): ?><h4 class="modal-title green" id="myModalLabel"><?php echo e($lightbox->title); ?></h4><?php endif; ?>
+            </div>
+            <div class="modal-body">
+               <?php if($lightbox->image): ?>
+                <a href="<?php echo e($lightbox->link); ?>"><img src="<?php echo e(asset('/img/'.$lightbox->image)); ?>" alt="<?php echo e($lightbox->alt); ?>" class=
+                "img-responsive"></a>
+               <?php else: ?>
+                <?php echo $lightbox->bodyText; ?>
+
+               <?php endif; ?> 
+  
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+<?php endif; ?>

@@ -1,0 +1,69 @@
+<IfModule mod_rewrite.c>
+    <IfModule mod_negotiation.c>
+        Options -MultiViews
+    </IfModule>
+    Options +FollowSymLinks
+    RewriteEngine On
+
+    # Redirect Trailing Slashes...
+    RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+    # Handle Front Controller...
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^ index.php [L]
+    Redirect /about-us/partners /promotions/partners
+    Redirect 301 /home-mobile /
+    Redirect 301 /comments/feed/ /
+    Redirect 301 /feed/ /
+    Redirect 301 /merry-maids-locator/manitoba/merry-maids-of-winnipeg-south/ /merry-maids-locator/manitoba/merry-maids-of-winnipeg
+    Redirect 301 /erry-maids-locator/alberta/merry-maids-of-lethbridge/ /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/quote-form-tester/ /merry-maids-locator/alberta
+    Redirect 301 /promotions/coupons/future-shop/ /promotions/coupons/
+    Redirect 301 /franchise-opportunities/request-information/%20target= /franchise-opportunities/request-information
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-red /merry-maids-locator/alberta/merry-maids-of-red-deer
+    Redirect 301 /franchise-opportunities/Brian /franchise-opportunities/franchise-opportunities
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/merry-maids-lethbridge/merry-maids-lethbridge.php  /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/merry-maids-lethbridge-promotion/gift-cards.php /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/promotions/gift-card-terms-conditions /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/merry-maids-locator /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/promotions/gift-cards /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/promotions/partners /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/promotions/promotions /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/promotions/purchase-gift-cards /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/promotions/request-a-quote /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/trusted-help/managing-quality /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/trusted-help/our-guarantee /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/trusted-help/our-services /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/trusted-help/protecting-you /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/trusted-help/trusted-help /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/promotions/promotions /promotions/promotions
+    Redirect 301 /franchise-opportunities/franchise-opportunities/support /franchise-opportunities/support
+    Redirect 301 /merry-maids-socialmedia-program /
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/cleaning-tips /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/about-us/partners /merry-maids-locator/alberta
+    Redirect 301 /merry-maids-locator/alberta/about-us/testimonials /merry-maids-locator/alberta
+    Redirect 301 /merry-maids-locator/alberta/franchise-opportunities/franchise-opportunities /merry-maids-locator/alberta
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/about-us/about-us  /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/about-us/careers /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/about-us/company-history /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/about-us/contact-us /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/about-us/faqs /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/about-us/testimonials /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/promotions/coupons /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/franchise-opportunities/company-information /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/franchise-opportunities/franchise-opportunities /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/franchise-opportunities/franchisee-testimonials /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/franchise-opportunities/request-information /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/franchise-opportunities/support /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/franchise-opportunities/training /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge/franchise-opportunities/whats-included /merry-maids-locator/alberta/merry-maids-of-lethbridge
+    Redirect 301 /merry-maids-locator/alberta/about-us/careers /merry-maids-locator/alberta 
+    Redirect 301 /franchise-opportunities/franchisse-testimonials /franchise-opportunities/franchisee-testimonials
+    Redirect 301 /merry-maids-locator/new-brunswick/merry-maids-of-saint-john http://www.merrymaidssaintjohn.com/
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-calgary-s-w http://www.merrymaidscalgarysw.ca/
+    Redirect 301 /merry-maids-locator/alberta/merry-maids-of-lethbridge http://www.merrymaidslethbridge.com
+    Redirect 301 /merry-maids-locator/british-columbia/merry-maids-of-vancouver-downtown http://www.merrymaids.ca/merry-maids-locator/british-columbia/merry-maids-of-vancouver
+    Redirect 301 /merry-maids-locator/ontario/merry-maids-of-lindsay-peterborough http://peterboroughcleaningmaids.com/
+    Redirect 301 /vancouver http://www.merrymaids.ca/merry-maids-locator/british-columbia/merry-maids-of-vancouver
+</IfModule>

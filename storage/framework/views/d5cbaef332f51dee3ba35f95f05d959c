@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><?php echo $__env->yieldContent('title'); ?><?php echo e($data['allPages']->city); ?></title>
+		<meta name="description" content="<?php echo $__env->yieldContent('description'); ?>">
+		<meta http-equiv="Keywords" name="Keywords" content="cleaners,cleaner,cleaning,clean,house,home,houses,homes,house cleaning service,pet,dog,cat,pets,closet,carpet,drapes,window,janitorial,apartment,moving,garage,deck, merry maids"/>
+		<meta property="og:description" content="Call us at 905-891-8735 directly to request a Merry Maids of Mississauga cleaning consultation. We are your Mississauga area cleaning service professionals and pledge to clean thoroughly, completely and reliably. It’s how we do our job and it's guaranteed." />
+		<meta name="geo.position" content="<?php echo e($data['allPages']->lng); ?>,<?php echo e($data['allPages']->lat); ?>">
+		<meta name="geo.region" content="CA-ON"/>
+		<meta name="geo.placename" content="Mississauga, ON"/>
+		<meta property="og:url" content="http://www.mississaugacleaningmaids.ca" />
+		<link href="<?php echo e(asset('/css/mm.css')); ?>" rel="stylesheet">
+	</head>
+	<body>
+		<?php echo $__env->make('includes.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		<div class="mainContainer">
+			<?php echo $__env->yieldContent('content'); ?>
+			<?php echo $__env->make('includes.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+		</div>
+		<script src="<?php echo e(asset('/js/jquery.js')); ?>"></script>
+		<!-- Include all compiled plugins (below), or include individual files as needed -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script src="<?php echo e(asset('/js/jquery.themepunch.tools.min.js')); ?>"></script>
+		<script src="<?php echo e(asset('/js/jquery.themepunch.revolution.min.js')); ?>"></script>
+		<script src="http://maps.googleapis.com/maps/api/js"></script>
+		
+		<script src="<?php echo e(asset('js/mm.js')); ?>"></script>
+		<!--launch the lightbox if there is data in lightboxHome DB table-->
+		<?php if(!empty($lightbox)): ?>
+
+		<?php if($lightbox->show): ?>
+			<script>
+				$("#lightboxHome").modal()
+			</script>
+		<?php endif; ?>
+		<?php endif; ?>
+
+		<!--show only if there is an error while filling email form-->
+		<?php if(count($errors) > 0): ?>
+			<?php if($errors[0] == "Email Form"): ?>
+				<script type="text/javascript">
+					$(window).load(function(){
+						$('#clickEmailModel').modal('show');
+					});
+				</script>
+			<?php else: ?>
+			<?php endif; ?>
+		<?php endif; ?>
+	</body>
+</html>
